@@ -6,7 +6,7 @@ This repo contains a containerized version of [LyX](https://www.lyx.org/), the L
 On January 7, 2023, LyX 2.3.7 was released. This version [isn't available on](http://ppa.launchpad.net/lyx-devel/release/ubuntu/dists/) for Ubuntu 20.04 users via the lyx-devel PPA, which has been discontinued after nearly a decade. However, new versions of LyX are [available](https://launchpad.net/ubuntu/+source/lyx) in universe repo of Ubuntu.
 
 ## Why not flatpak, snap or appimage?
-I'm lazy. Simple as that.  &#58;&#124;
+I'm lazy. Simple as that. :|
 
 ## Supported LyX Version
 Currently, I am able to build LyX 2.3.7. However, there are some issues with the container.
