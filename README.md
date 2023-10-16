@@ -1,5 +1,7 @@
 # A Dockerised LyX
 
+**UPDATE (16th Oct 23): I will stick to Lyx 2.3.6-1 as it is working fine.**
+
 This repo contains a containerized version of [LyX](https://www.lyx.org/), the LaTeX WYSIWYG editor, built on [Ubuntu 23.04](https://hub.docker.com/_/ubuntu/tags?page=1&name=23.04). Ideal for running on systems with incompatible or older dependencies.
 
 ## Why Containerize LyX?
@@ -57,13 +59,15 @@ xhost +local:docker
 
 The docker container can be launched with the following command:
 ```sh
-docker run -it --rm \                                                     
+docker run -it --rm \
 -e DISPLAY=$DISPLAY \
 -v /tmp/.X11-unix:/tmp/.X11-unix \
+-v $(pwd):/root/project \
 lyx-container
 ```
 * `-e DISPLAY=$DISPLAY` : Sets the DISPLAY environment variable inside the container.
-* `-v /tmp/.X11-unix:/tmp/.X11-unix` : Mounts the X11 UNIX socket into the container, 
+* `-v /tmp/.X11-unix:/tmp/.X11-unix` : Mounts the X11 UNIX socket into the container,
+* Also, bind the `$(pwd)` to `/root/project`
 
 And you should be able to see this screen. Bit glitchy atm.
 
@@ -101,3 +105,7 @@ root@cac097c14f8e:/#
 ## License
 
 This project is licensed under AGPL-3.0. See the [LICENSE](LICENSE) file for details.
+
+## Screenshots
+![Alt text](images/lyx_main_2.3.6.1.png)
+![Alt text](images/lyx_2.3.6.1_output.png)
