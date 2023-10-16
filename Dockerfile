@@ -15,7 +15,7 @@ RUN apt-get update && \
     apt-get install -y imagemagick python3 lyx x11-apps texlive && \
     rm -rf /var/lib/apt/lists/*
 
-# Modify ImageMagick policy to allow PDF operations
+# Modify ImageMagick policy to allow PDF operations (https://cromwell-intl.com/open-source/pdf-not-authorized.html)
 RUN sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
 
 # Set environment variable for display

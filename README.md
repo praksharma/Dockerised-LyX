@@ -101,6 +101,11 @@ lyx:
         100 /var/lib/dpkg/status
 root@cac097c14f8e:/# 
 ```
+### Prune unused images
+Each time we build a Docker image the Docker will create new unused image with NONE tag. We can force remove unused tag with.
+```sh
+docker image prune -f
+```
 
 ## License
 
