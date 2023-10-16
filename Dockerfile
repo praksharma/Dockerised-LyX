@@ -7,7 +7,7 @@ LABEL version="1.0"
 LABEL description="Dockerised LyX"
 
 # Set environment variables to non-interactive (this prevents some prompts)
-ENV DEBIAN_FRONTEND=non-interactive
+ENV DEBIAN_FRONTEND==noninteractive
 
 # Install dependencies and LyX
 RUN apt-get update && \
