@@ -1,5 +1,7 @@
 # A Dockerised LyX
 
+Docker container: https://hub.docker.com/repository/docker/prakhars962/lyx
+
 **UPDATE (16th Oct 23): I will stick to Lyx 2.3.6-1 as it is working fine.**
 
 This repo contains a containerized version of [LyX](https://www.lyx.org/), the LaTeX WYSIWYG editor, built on [Ubuntu 23.04](https://hub.docker.com/_/ubuntu/tags?page=1&name=23.04). Ideal for running on systems with incompatible or older dependencies.
