@@ -12,7 +12,7 @@ ENV DEBIAN_FRONTEND=non-interactive
 # Install dependencies and LyX
 RUN apt-get update && \
     apt-get install -y tzdata && \
-    apt-get install -y imagemagick python3 lyx x11-apps fonts-lyx texlive-full && \
+    apt-get install -y imagemagick python3 lyx x11-apps texlive && \
     rm -rf /var/lib/apt/lists/*
 
 # Modify ImageMagick policy to allow PDF operations (https://cromwell-intl.com/open-source/pdf-not-authorized.html)

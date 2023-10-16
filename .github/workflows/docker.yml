@@ -23,10 +23,18 @@ jobs:
         name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       -
-        name: Build and push
+        name:  Build and push full version
         uses: docker/build-push-action@v4
         with:
           context: .
           file: Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/lyx:${{ github.event.release.tag_name}}
+      -
+        name: Build and push minimal version
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: Dockerfile-minimal
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/lyx:minimal-${{ github.event.release.tag_name }}
